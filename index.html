@@ -70,7 +70,7 @@
       align-items: flex-start;
       flex-wrap: wrap;
     }
-    .intro img {
+    .intro img.profile {
       max-width: 300px;
       width: 300px;
       height: 300px;
@@ -78,7 +78,7 @@
       margin-right: 20px;
       border: 2px solid #50fa7b;
     }
-    .intro div {
+    .intro div.text {
       flex: 1;
     }
     /* Contacts styling inside introduction */
@@ -89,6 +89,14 @@
     .contacts a {
       margin-right: 15px;
       font-weight: 500;
+    }
+    /* University Logo Styling */
+    .university-logo {
+      margin-top: 20px;
+    }
+    .university-logo img {
+      max-width: 150px;
+      height: auto;
     }
     
     /* Global List Styling for content area */
@@ -153,6 +161,9 @@
         <li><a href="#research-experience">Research Experience</a></li>
         <li><a href="#teaching">Teaching &amp; Mentoring</a></li>
         <li><a href="#honors-awards">Honors &amp; Awards</a></li>
+        <li><a href="#technical-skills">Technical Skills</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#references">References</a></li>
       </ul>
     </nav>
 
@@ -161,17 +172,21 @@
       <!-- Introduction Section -->
       <section id="introduction" class="section">
         <div class="intro">
-          <img src="amirrezadolatpour.jpeg" alt="Profile Image">
-          <div>
+          <img class="profile" src="amirrezadolatpour.jpeg" alt="Profile Image">
+          <div class="text">
             <h1>Amirreza Dolatpour Fathkouhi</h1>
             <p>
-              Welcome to my academic website. I am a Ph.D. student in Computer Science at the University of Virginia. Here, you can find details about my education, research interests, publications, and professional experiences.
+              Hello, I'm Amirreza Dolatpour Fathkouhi—a passionate researcher committed to transforming innovative ideas into practical solutions. As a Ph.D. student in Computer Science at the University of Virginia, I explore the cutting edge of machine learning, computer vision, and artificial intelligence. My academic journey began at Shiraz University of Technology, and today I thrive on collaborative research and continuous learning.
             </p>
             <div class="contacts">
               <a href="https://github.com/amirrezadolatpour2000" target="_blank">GitHub</a>
               <a href="https://www.researchgate.net/profile/Amirreza-Dolatpour-Fathkouhi?ev=hdr_xprf" target="_blank">ResearchGate</a>
               <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank">LinkedIn</a>
               <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            </div>
+            <!-- University Logo -->
+            <div class="university-logo">
+              <img src="uva-logo.png" alt="University of Virginia Logo">
             </div>
           </div>
         </div>
