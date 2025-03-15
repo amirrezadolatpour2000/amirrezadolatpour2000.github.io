@@ -90,10 +90,14 @@
       font-weight: 500;
     }
     
-    /* List Styling */
-    ul {
+    /* Global List Styling for content area */
+    .content ul {
       list-style-type: disc;
       margin-left: 20px;
+      list-style-position: outside;
+    }
+    .content ul li {
+      margin-bottom: 15px;
     }
     /* Nested lists: circle bullets for nested items */
     .education-list ul {
@@ -245,7 +249,7 @@
         </ul>
       </section>
 
-      <!-- Teaching and Mentoring Section -->
+      <!-- Teaching & Mentoring Section -->
       <section id="teaching" class="section">
         <h2>Teaching &amp; Mentoring Experience</h2>
         <ul>
@@ -280,8 +284,8 @@
         <ul>
           <li>
             <strong>Heman Shakeri, Professor</strong><br>
-            Department of Computer Science, University of Virginia<br>
-            [Email: heman.shakeri@example.com]
+            Department of Data Science, University of Virginia<br>
+            hs9hd@virginia.edu
           </li>
           <li>
             <strong>Geoffrey Fox, Professor</strong><br>
