@@ -1,151 +1,190 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amirreza Dolatpour Fathkouhi</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amirreza Dolatpour Fathkouhi - Academic Website</title>
+  <style>
+    /* Dark Theme Settings */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    a {
+      color: #90caf9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Layout */
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+    }
+    .content {
+      margin-left: 270px;
+      padding: 20px;
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+    
+    /* Introduction Section with Image */
+    .intro {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .intro img {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research-interests">Research Interests</a></li>
+        <li><a href="#research-articles">Research Articles</a></li>
+        <li><a href="#research-experience">Research Experience</a></li>
+        <li><a href="#teaching">Teaching & Mentoring</a></li>
+        <li><a href="#honors-awards">Honors & Awards</a></li>
+        <li><a href="#technical-skills">Technical Skills</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
 
-    <div class="container">
-        <header>
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Introduction Section -->
+      <section id="introduction" class="section">
+        <div class="intro">
+          <img src="your-image.jpg" alt="Profile Image">
+          <div>
             <h1>Amirreza Dolatpour Fathkouhi</h1>
-            <p class="contact">Email: <a href="mailto:aww9gh@virginia.edu">aww9gh@virginia.edu</a></p>
-            <nav>
-                <a href="index.html">Home</a> |
-                <a href="research.html">Research</a> |
-                <a href="teaching.html">Teaching</a>
-            </nav>
-        </header>
+            <p>
+              Welcome to my academic website. I am currently a Ph.D. student in Computer Science at the University of Virginia specializing in Foundation Models for Astronomy. Here, you can find details about my education, research interests, publications, professional experiences, and more.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="intro">
-            <img src="images/amirreza_dolatpour.jpg" alt="Amirreza Dolatpour" class="profile-pic">
-            <p>
-                I am a Ph.D. student in <a href="https://engineering.virginia.edu/departments/computer-science">Computer Science</a> at the University of Virginia, working on **foundation models for astrophysics** under the supervision of <a href="https://scholar.google.com/citations?user=b_wxU6AAAAAJ">Prof. Geoffrey Fox</a>.
-            </p>
-            <p>
-                My research focuses on **Deep Learning, Machine Learning, Computer Vision, and AI for Science**. I develop **multimodal foundation models** and **masked autoencoders** for astrophysical data.
-            </p>
-            <p>
-                You can find my research on:
-                <a href="https://github.com/amirrezadolatpour">GitHub</a>,
-                <a href="https://scholar.google.com/citations?user=xyz123">Google Scholar</a>,
-                <a href="https://www.researchgate.net/profile/Amirreza-Dolatpour-Fathkouhi">ResearchGate</a>.
-            </p>
-        </section>
+      <!-- Education Section -->
+      <section id="education" class="section">
+        <h2>Education</h2>
+        <p>
+          <strong>Ph.D. in Computer Science</strong><br>
+          University of Virginia, Charlottesville, USA (2023 - 2028)<br>
+          Research Domain: Foundation Model for Astronomy<br>
+          Supervisor: Prof. Geoffrey Fox
+        </p>
+        <p>
+          <strong>Bachelor of Computer Engineering</strong><br>
+          Shiraz University of Technology, Shiraz, Iran (2018 - 2022)<br>
+          GPA: 3.671/4.0
+        </p>
+      </section>
+
+      <!-- Research Interests Section -->
+      <section id="research-interests" class="section">
+        <h2>Research Interests</h2>
+        <p>Deep Learning, Machine Learning, Computer Vision, and AI for Science.</p>
+      </section>
+
+      <!-- Research Articles Section -->
+      <section id="research-articles" class="section">
+        <h2>Research Articles</h2>
+        <ul>
+          <li>Scalable Cosmic AI Inference using Cloud Serverless Computing with FMI [Peer Review]</li>
+          <li>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture [Accepted]</li>
+        </ul>
+      </section>
+
+      <!-- Research Experience Section -->
+      <section id="research-experience" class="section">
+        <h2>Research Experience</h2>
+        <ul>
+          <li><strong>Researcher</strong> - University of Virginia (Dec 2023 - Present)</li>
+          <li><strong>Researcher</strong> - University of Windsor (April 2022 - Dec 2023)</li>
+          <li><strong>Researcher</strong> - Shiraz University of Technology (Feb 2022 - April 2022)</li>
+          <li><strong>Researcher</strong> - Shiraz University of Technology (June 2020 - April 2022)</li>
+        </ul>
+      </section>
+
+      <!-- Teaching and Mentoring Section -->
+      <section id="teaching" class="section">
+        <h2>Teaching and Mentoring Experience</h2>
+        <ul>
+          <li>Teaching Assistant, Advanced Programming (Jan 2020 - Sep 2020)</li>
+          <li>Teaching Assistant, Artificial Intelligence and Expert Systems (Sep 2020 - Feb 2021)</li>
+          <li>Teaching Assistant, Computational Intelligence (Mar 2021 - Aug 2021)</li>
+          <li>Teaching Assistant, Algorithm Design (Mar 2021 - Aug 2021)</li>
+        </ul>
+      </section>
+
+      <!-- Honors and Awards Section -->
+      <section id="honors-awards" class="section">
+        <h2>Honors and Awards</h2>
+        <p>Ranked 4th among all the computer engineering students.</p>
+      </section>
+
+      <!-- Technical Skills Section -->
+      <section id="technical-skills" class="section">
+        <h2>Technical Skills</h2>
+        <p>
+          <strong>Programming:</strong> Matlab, C, C++, C#, Java, Python, Tensorflow, Pytorch, Numpy, Pandas.<br>
+          <strong>Tools:</strong> IntelliJ IDEA, PyCharm, Visual Studio, Weka.<br>
+          <strong>Operating Systems:</strong> Windows.
+        </p>
+      </section>
+
+      <!-- Languages Section -->
+      <section id="languages" class="section">
+        <h2>Languages</h2>
+        <p>
+          Persian: Native<br>
+          English: Professional working proficiency
+        </p>
+      </section>
+
+      <!-- References Section -->
+      <section id="references" class="section">
+        <h2>References</h2>
+        <p>
+          <strong>Geoffrey Fox, Professor</strong><br>
+          Department of Computer Science, University of Virginia<br>
+          gcfexchange@gmail.com
+        </p>
+        <p>
+          <strong>Reza Akbari, Associate Professor</strong><br>
+          Department of Computer Engineering, Shiraz University of Technology<br>
+          akbari@sutech.ac.ir
+        </p>
+        <p>
+          <strong>Abdollah Kavousi-Fard, Associate Professor</strong><br>
+          Department of Electrical and Electronic Engineering, Shiraz University of Technology<br>
+          kavousi@sutech.ac.ir
+        </p>
+      </section>
     </div>
-
-</body>
-</html>
- -->
-
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amirreza Dolatpour Fathkouhi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .contact-info a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .profile-pic {
-            float: right;
-            margin: 0 0 10px 10px;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>Amirreza Dolatpour Fathkouhi</h1>
-    <img src="path_to_your_profile_picture.jpg" alt="Amirreza Dolatpour Fathkouhi" class="profile-pic">
-    <p>
-        I am a Ph.D. student in Computer Science at the University of Virginia, specializing in deep learning and machine learning. My research focuses on developing innovative AI models for astrophysical data analysis.
-    </p>
-    <h2>Contact Information</h2>
-    <ul class="contact-info">
-        <li>Email: <a href="mailto:aww9gh@virginia.edu">aww9gh@virginia.edu</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi" target="_blank">Amirreza Dolatpour Fathkouhi</a></li>
-        <li>Google Scholar: <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ" target="_blank">Amirreza Dolatpour Fathkouhi</a></li>
-        <li>ORCID: <a href="https://orcid.org/0000-0003-2165-2932" target="_blank">0000-0003-2165-2932</a></li>
-    </ul>
-    <h2>Education</h2>
-    <ul>
-        <li><strong>Ph.D. in Computer Science</strong>, University of Virginia, 2023 - Present</li>
-        <li><strong>Bachelor of Computer Engineering</strong>, Shiraz University of Technology, 2018 - 2022</li>
-    </ul>
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Deep Learning</li>
-        <li>Machine Learning</li>
-        <li>Computer Vision</li>
-        <li>AI for Science</li>
-    </ul>
-    <h2>Publications</h2>
-    <ul>
-        <li>
-            <strong>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture</strong> (2024). <br>
-            <em>Authors:</em> Amirreza Dolatpour Fathkouhi, Geoffrey Charles Fox. <br>
-            <em>Published in:</em> 2024 IEEE 20th International Conference on e-Science. <br>
-            <a href="https://arxiv.org/abs/2409.01825" target="_blank">View Publication</a>
-        </li>
-        <li>
-            <strong>Scalable Cosmic AI Inference using Cloud Serverless Computing with FMI</strong> (2025). <br>
-            <em>Authors:</em> Mills Staylor, Amirreza Dolatpour Fathkouhi, Md Khairul Islam, Kaleigh O'Hara, Ryan Ghiles Goudjil, Geoffrey Fox, Judy Fox. <br>
-            <em>Published in:</em> arXiv preprint arXiv:2501.06249. <br>
-            <a href="https://arxiv.org/abs/2501.06249" target="_blank">View Publication</a>
-        </li>
-    </ul>
-    <h2>Technical Skills</h2>
-    <ul>
-        <li><strong>Programming Languages:</strong> Python, TensorFlow, PyTorch, Matlab, C++, Java</li>
-        <li><strong>Tools:</strong> IntelliJ IDEA, PyCharm, Visual Studio</li>
-        <li><strong>Operating Systems:</strong> Windows</li>
-    </ul>
-    <h2>Teaching Experience</h2>
-    <ul>
-        <li>Teaching Assistant: Artificial Intelligence, Computational Intelligence</li>
-    </ul>
-    <h2>References</h2>
-    <ul>
-        <li><strong>Prof. Geoffrey Fox</strong> - University of Virginia (<a href="mailto:gcfexchange@gmail.com">gcfexchange@gmail.com</a>)</li>
-        <li><strong>Prof. Reza Akbari</strong> - Shiraz University of Technology (<a href="mailto:akbari@sutech.ac.ir">akbari@sutech.ac.ir</a>)</li>
-    </ul>
-</div>
-
+  </div>
 </body>
 </html>
