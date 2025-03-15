@@ -66,7 +66,7 @@
     /* Introduction Section with Image Beside Text */
     .intro {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
     .intro img {
@@ -97,6 +97,23 @@
     .sidebar li {
       margin-bottom: 10px;
     }
+    
+    /* Social Links (Connect) Styling */
+    .social-links a {
+      margin-right: 15px;
+      font-weight: 500;
+    }
+    
+    /* Research Articles List Styling */
+    .research-list li {
+      margin-bottom: 20px;
+    }
+    .research-list strong {
+      font-size: 1.2rem;
+    }
+    .research-list em {
+      color: #ffb86c;
+    }
   </style>
 </head>
 <body>
@@ -112,9 +129,10 @@
         <li><a href="#research-experience">Research Experience</a></li>
         <li><a href="#teaching">Teaching & Mentoring</a></li>
         <li><a href="#honors-awards">Honors & Awards</a></li>
-        <li><a href="#technical-skills">Technical Skills</a></li>
-        <li><a href="#languages">Languages</a></li>
-        <li><a href="#references">References</a></li>
+<!--         <li><a href="#technical-skills">Technical Skills</a></li> -->
+<!--         <li><a href="#languages">Languages</a></li> -->
+<!--         <li><a href="#references">References</a></li> -->
+<!--         <li><a href="#social-links">Connect</a></li> -->
       </ul>
     </nav>
 
@@ -157,9 +175,19 @@
       <!-- Research Articles Section -->
       <section id="research-articles" class="section">
         <h2>Research Articles</h2>
-        <ul>
-          <li>Scalable Cosmic AI Inference using Cloud Serverless Computing with FMI [Peer Review]</li>
-          <li>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture [Accepted]</li>
+        <ul class="research-list">
+          <li>
+            <strong>Scalable Cosmic AI Inference using Cloud Serverless Computing with FMI</strong> [Peer Review]<br>
+            <em>International Journal of High Performance Computing Applications</em><br>
+            Authors: Staylor Mills, Amirreza Dolatpour Fathkouhi, Khairul Islam, Kaleigh O’Hara, Ryan Ghiles Goudjil, Geoffrey C. Fox, Judy Fox<br>
+            <a href="https://example.com/publication1" target="_blank">View Publication</a>
+          </li>
+          <li>
+            <strong>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture</strong> [Accepted]<br>
+            <em>20th IEEE International Conference on e-Science</em><br>
+            Authors: Amirreza Dolatpour Fathkouhi, Geoffrey C. Fox<br>
+            <a href="https://example.com/publication2" target="_blank">View Publication</a>
+          </li>
         </ul>
       </section>
 
@@ -256,6 +284,17 @@
           <strong>Abdollah Kavousi-Fard, Associate Professor</strong><br>
           Department of Electrical and Electronic Engineering, Shiraz University of Technology<br>
           kavousi@sutech.ac.ir
+        </p>
+      </section>
+
+      <!-- Connect Section -->
+      <section id="social-links" class="section">
+        <h2>Connect</h2>
+        <p class="social-links">
+          <a href="https://github.com/amirrezadolatpour2000" target="_blank">GitHub</a>
+          <a href="https://www.researchgate.net/profile/Amirreza-Dolatpour-Fathkouhi?ev=hdr_xprf" target="_blank">ResearchGate</a>
+          <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ&hl=en" target="_blank">Google Scholar</a>
         </p>
       </section>
     </div>
