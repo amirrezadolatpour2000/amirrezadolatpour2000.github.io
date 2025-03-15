@@ -90,7 +90,7 @@
       margin-right: 15px;
       font-weight: 500;
     }
-    /* University Logo Styling */
+    /* University Logo Styling (in Introduction) */
     .university-logo {
       margin-top: 20px;
     }
@@ -146,6 +146,21 @@
       list-style-type: circle;
       margin-left: 20px;
     }
+    
+    /* Education Logo Styling */
+    .edu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .edu-logo {
+      width: 50px;
+      height: auto;
+      margin-right: 15px;
+    }
+    .edu-text {
+      flex: 1;
+    }
   </style>
 </head>
 <body>
@@ -181,9 +196,8 @@
               <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank">LinkedIn</a>
               <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ&hl=en" target="_blank">Google Scholar</a>
               <a href="Amirreza Dolatpour Fathkouhi_CV.pdf" target="_blank">CV</a>
-
             </div>
-            <!-- University Logo -->
+            <!-- University Logo in Introduction -->
             <div class="university-logo">
               <img src="uva-logo.png" alt="University of Virginia Logo">
             </div>
@@ -196,18 +210,28 @@
         <h2>Education</h2>
         <ul class="education-list">
           <li>
-            <strong>Ph.D. in Computer Science</strong>
-            <ul>
-              <li>University of Virginia, Charlottesville, USA (2023 - 2028)</li>
-              <li><em>Supervisor: Prof. Heman Shakeri</em></li>
-            </ul>
+            <div class="edu-item">
+              <img src="uva-logo.png" alt="University of Virginia Logo" class="edu-logo">
+              <div class="edu-text">
+                <strong>Ph.D. in Computer Science</strong>
+                <ul>
+                  <li>University of Virginia, Charlottesville, USA (2023 - 2028)</li>
+                  <li><em>Supervisor: Prof. Heman Shakeri</em></li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li>
-            <strong>Bachelor of Computer Engineering</strong>
-            <ul>
-              <li>Shiraz University of Technology, Shiraz, Iran (2018 - 2022)</li>
-              <li><em>GPA: 3.671/4.0</em></li>
-            </ul>
+            <div class="edu-item">
+              <img src="sut-logo.png" alt="Shiraz University of Technology Logo" class="edu-logo">
+              <div class="edu-text">
+                <strong>Bachelor of Computer Engineering</strong>
+                <ul>
+                  <li>Shiraz University of Technology, Shiraz, Iran (2018 - 2022)</li>
+                  <li><em>GPA: 3.671/4.0</em></li>
+                </ul>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
@@ -215,7 +239,7 @@
       <!-- Research Interests Section -->
       <section id="research-interests" class="section">
         <h2>Research Interests</h2>
-        <li> <p>Deep Learning, Machine Learning, Computer Vision, and AI for Science.</p> </li>
+        <p>Deep Learning, Machine Learning, Computer Vision, and AI for Science.</p>
       </section>
 
       <!-- Research Articles Section -->
