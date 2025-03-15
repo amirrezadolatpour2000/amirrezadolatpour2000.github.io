@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amirreza Dolatpour Fathkouhi - Academic Website</title>
   <style>
-    /* Dark Theme Settings */
+    /* Global Dark Theme (Dracula-Inspired) */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
+      background-color: #282a36;
+      color: #f8f8f2;
     }
     a {
-      color: #90caf9;
+      color: #bd93f9;
       text-decoration: none;
     }
     a:hover {
@@ -26,7 +26,7 @@
     }
     .sidebar {
       width: 250px;
-      background-color: #1e1e1e;
+      background-color: #44475a;
       padding: 20px;
       height: 100vh;
       position: fixed;
@@ -40,6 +40,21 @@
       margin-bottom: 50px;
     }
     
+    /* Headings Styling */
+    h1 {
+      color: #50fa7b;
+    }
+    h2 {
+      color: #ff79c6;
+      border-bottom: 2px solid #ff79c6;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      color: #8be9fd;
+      margin-bottom: 5px;
+    }
+    
     /* Introduction Section with Image */
     .intro {
       display: flex;
@@ -50,6 +65,15 @@
       max-width: 150px;
       border-radius: 50%;
       margin-right: 20px;
+      border: 2px solid #50fa7b;
+    }
+
+    /* Research Experience Experiment Styles */
+    .experiment {
+      margin-bottom: 30px;
+    }
+    .experiment p {
+      margin-top: 0;
     }
   </style>
 </head>
@@ -81,7 +105,7 @@
           <div>
             <h1>Amirreza Dolatpour Fathkouhi</h1>
             <p>
-              Welcome to my academic website. I am currently a Ph.D. student in Computer Science at the University of Virginia specializing in Foundation Models for Astronomy. Here, you can find details about my education, research interests, publications, professional experiences, and more.
+              Welcome to my academic website. I am a Ph.D. student in Computer Science at the University of Virginia. Here, you can find details about my education, research interests, publications, professional experiences, and more.
             </p>
           </div>
         </div>
@@ -93,7 +117,7 @@
         <p>
           <strong>Ph.D. in Computer Science</strong><br>
           University of Virginia, Charlottesville, USA (2023 - 2028)<br>
-          Research Domain: Foundation Model for Astronomy<br>
+          Research Domain: [Previously Foundation Models for Astrophysics]<br>
           Supervisor: Prof. Geoffrey Fox
         </p>
         <p>
@@ -121,12 +145,34 @@
       <!-- Research Experience Section -->
       <section id="research-experience" class="section">
         <h2>Research Experience</h2>
-        <ul>
-          <li><strong>Researcher</strong> - University of Virginia (Dec 2023 - Present)</li>
-          <li><strong>Researcher</strong> - University of Windsor (April 2022 - Dec 2023)</li>
-          <li><strong>Researcher</strong> - Shiraz University of Technology (Feb 2022 - April 2022)</li>
-          <li><strong>Researcher</strong> - Shiraz University of Technology (June 2020 - April 2022)</li>
-        </ul>
+        
+        <div class="experiment">
+          <h3>Advanced Machine Learning Applications in Dynamo Lab (Dec 2023 – Present)</h3>
+          <p>
+            At the University of Virginia’s Department of Computer Science, I am currently working with Heman Shakeri in the Dynamo Lab on advanced machine learning applications aimed at addressing complex data analysis challenges. Previously, I collaborated with Prof. Geoffrey Fox in the Infomall Lab on developing foundation models for astrophysics data, which provided a strong background in advanced deep learning techniques. My current work focuses on integrating optimization methods and novel deep learning architectures to enhance model performance and interpretability across various domains.
+          </p>
+        </div>
+        
+        <div class="experiment">
+          <h3>Swarm Intelligence Optimizer for the LIME Algorithm (April 2022 – Dec 2023)</h3>
+          <p>
+            At the University of Windsor, I enhanced the Local Interpretable Model-agnostic Explanations (LIME) algorithm by integrating a swarm intelligence optimizer. This project aimed to improve the algorithm’s efficiency and interpretability, drawing inspiration from natural collective behavior to better explain complex machine learning models.
+          </p>
+        </div>
+        
+        <div class="experiment">
+          <h3>Medical Data Preprocessing and Modeling (Feb 2022 – April 2022)</h3>
+          <p>
+            At Shiraz University of Technology’s Data Modeling, Processing, and Analysis Research Group, I focused on cleaning, analyzing, and modeling medical datasets. The goal was to extract meaningful features from complex healthcare data, ultimately contributing to more accurate predictive models in medical applications.
+          </p>
+        </div>
+        
+        <div class="experiment">
+          <h3>Enhanced Bat Algorithm for Hyperparameter Tuning (June 2020 – April 2022)</h3>
+          <p>
+            At the Electrical and Electronic Engineering Department of Shiraz University of Technology, I refined the bat algorithm—a metaheuristic optimization technique—and applied it to hyperparameter tuning in deep neural networks. This project sought to optimize training processes and improve the overall performance of deep learning models.
+          </p>
+        </div>
       </section>
 
       <!-- Teaching and Mentoring Section -->
