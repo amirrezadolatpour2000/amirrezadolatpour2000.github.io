@@ -37,7 +37,7 @@
       overflow-y: auto;
     }
     .content {
-      margin-left: 270px;
+      margin-left: 220px;
       padding: 20px;
     }
     .section {
@@ -80,13 +80,25 @@
     .intro div {
       flex: 1;
     }
-
-    /* Research Experience Experiment Styles */
-    .experiment {
-      margin-bottom: 30px;
+    /* Contacts styling inside introduction */
+    .contacts {
+      margin-top: 15px;
+      font-size: 1rem;
     }
-    .experiment p {
-      margin-top: 0;
+    .contacts a {
+      margin-right: 15px;
+      font-weight: 500;
+    }
+    
+    /* List Styling */
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    /* Nested lists: circle bullets for nested items */
+    .education-list ul {
+      list-style-type: circle;
+      margin-left: 20px;
     }
     
     /* Sidebar List Styling */
@@ -96,12 +108,6 @@
     }
     .sidebar li {
       margin-bottom: 10px;
-    }
-    
-    /* Social Links (Connect) Styling */
-    .social-links a {
-      margin-right: 15px;
-      font-weight: 500;
     }
     
     /* Research Articles List Styling */
@@ -127,8 +133,11 @@
         <li><a href="#research-interests">Research Interests</a></li>
         <li><a href="#research-articles">Research Articles</a></li>
         <li><a href="#research-experience">Research Experience</a></li>
-        <li><a href="#teaching">Teaching & Mentoring</a></li>
-        <li><a href="#honors-awards">Honors & Awards</a></li>
+        <li><a href="#teaching">Teaching &amp; Mentoring</a></li>
+        <li><a href="#honors-awards">Honors &amp; Awards</a></li>
+        <li><a href="#technical-skills">Technical Skills</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#references">References</a></li>
       </ul>
     </nav>
 
@@ -141,8 +150,14 @@
           <div>
             <h1>Amirreza Dolatpour Fathkouhi</h1>
             <p>
-              Welcome to my academic website. I am a Ph.D. student in Computer Science at the University of Virginia. Here, you can find details about my education, research interests, publications, professional experiences, and more.
+              Welcome to my academic website. I am a Ph.D. student in Computer Science at the University of Virginia. Here, you can find details about my education, research interests, publications, and professional experiences.
             </p>
+            <div class="contacts">
+              <a href="https://github.com/amirrezadolatpour2000" target="_blank">GitHub</a>
+              <a href="https://www.researchgate.net/profile/Amirreza-Dolatpour-Fathkouhi?ev=hdr_xprf" target="_blank">ResearchGate</a>
+              <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank">LinkedIn</a>
+              <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            </div>
           </div>
         </div>
       </section>
@@ -150,16 +165,22 @@
       <!-- Education Section -->
       <section id="education" class="section">
         <h2>Education</h2>
-        <p>
-          <strong>Ph.D. in Computer Science</strong><br>
-           <li> University of Virginia, Charlottesville, USA (2023 - 2028)<br> </li>
-            <li> Supervisor: Prof. Heman Shakeri </li>
-        </p>
-        <p>
-          <strong>Bachelor of Computer Engineering</strong><br>
-          <li> Shiraz University of Technology, Shiraz, Iran (2018 - 2022)<br> </li>
-            <li> GPA: 3.671/4.0 </li> 
-        </p>
+        <ul class="education-list">
+          <li>
+            <strong>Ph.D. in Computer Science</strong>
+            <ul>
+              <li>University of Virginia, Charlottesville, USA (2023 - 2028)</li>
+              <li>Supervisor: Prof. Heman Shakeri</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Bachelor of Computer Engineering</strong>
+            <ul>
+              <li>Shiraz University of Technology, Shiraz, Iran (2018 - 2022)</li>
+              <li>GPA: 3.671/4.0</li>
+            </ul>
+          </li>
+        </ul>
       </section>
 
       <!-- Research Interests Section -->
@@ -178,7 +199,6 @@
             Authors: Staylor Mills, Amirreza Dolatpour Fathkouhi, Khairul Islam, Kaleigh O’Hara, Ryan Ghiles Goudjil, Geoffrey C. Fox, Judy Fox<br>
             <a href="https://arxiv.org/pdf/2501.06249" target="_blank">View Publication</a>
           </li>
-          
           <li>
             <strong>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture</strong> [Accepted]<br>
             <em>20th IEEE International Conference on e-Science</em><br>
@@ -191,57 +211,43 @@
       <!-- Research Experience Section -->
       <section id="research-experience" class="section">
         <h2>Research Experience</h2>
-
-          <div class="experiment">
-            <li>
-              <h3>Advanced Machine Learning Applications in Dynamo Lab (March 2025 – Present)</h3>
-              <p>
-                At the University of Virginia’s Department of Computer Science, I am currently working with Heman Shakeri in the Dynamo Lab on advanced machine learning applications aimed at addressing complex data analysis challenges.
-              </p>
-            </li>
-          </div>
-
-          <div class="experiment">
-            <li>
-              <h3>Foundation Model for Astronomy in Infomall Lab (March 2023 – Feb 2025)</h3>
-              <p>
-                I collaborated with Prof. Geoffrey Fox in the Infomall Lab on developing foundation models for astrophysics data, which provided a strong background in advanced deep learning techniques.
-              </p>
-            </li> 
-          </div>
-
-          <div class="experiment">
-            <li>
-              <h3>Swarm Intelligence Optimizer for the LIME Algorithm (April 2022 – Dec 2023)</h3>
-              <p>
-                At the University of Windsor, I enhanced the Local Interpretable Model-agnostic Explanations (LIME) algorithm by integrating a swarm intelligence optimizer. This project aimed to improve the algorithm’s efficiency and interpretability, drawing inspiration from natural collective behavior to better explain complex machine learning models.
-              </p>
-            </li> 
-          </div>
-
-          <div class="experiment">
-            <li>
-              <h3>Medical Data Preprocessing and Modeling (Feb 2022 – April 2022)</h3>
-              <p>
-                At Shiraz University of Technology’s Data Modeling, Processing, and Analysis Research Group, I focused on cleaning, analyzing, and modeling medical datasets. The goal was to extract meaningful features from complex healthcare data, ultimately contributing to more accurate predictive models in medical applications.
-              </p>
-            </li>
-          </div>
-
-          <div class="experiment">
-            <li>              
-              <h3>Enhanced Bat Algorithm for Hyperparameter Tuning (June 2020 – April 2022)</h3>
-              <p>
-                At the Electrical and Electronic Engineering Department of Shiraz University of Technology, I refined the bat algorithm—a metaheuristic optimization technique—and applied it to hyperparameter tuning in deep neural networks. This project sought to optimize training processes and improve the overall performance of deep learning models.
-              </p>
-            </li>
-          </div>
-        
+        <ul>
+          <li>
+            <h3>Advanced Machine Learning Applications in Dynamo Lab (March 2025 – Present)</h3>
+            <p>
+              At the University of Virginia’s Department of Computer Science, I am currently working with Heman Shakeri in the Dynamo Lab on advanced machine learning applications aimed at addressing complex data analysis challenges.
+            </p>
+          </li>
+          <li>
+            <h3>Foundation Model for Astronomy in Infomall Lab (March 2023 – Feb 2025)</h3>
+            <p>
+              I collaborated with Prof. Geoffrey Fox in the Infomall Lab on developing foundation models for astrophysics data, which provided a strong background in advanced deep learning techniques.
+            </p>
+          </li>
+          <li>
+            <h3>Swarm Intelligence Optimizer for the LIME Algorithm (April 2022 – Dec 2023)</h3>
+            <p>
+              At the University of Windsor, I enhanced the Local Interpretable Model-agnostic Explanations (LIME) algorithm by integrating a swarm intelligence optimizer. This project improved the algorithm’s efficiency and interpretability, drawing inspiration from natural collective behavior.
+            </p>
+          </li>
+          <li>
+            <h3>Medical Data Preprocessing and Modeling (Feb 2022 – April 2022)</h3>
+            <p>
+              At Shiraz University of Technology’s Data Modeling, Processing, and Analysis Research Group, I focused on cleaning, analyzing, and modeling medical datasets to extract meaningful features and enhance predictive models.
+            </p>
+          </li>
+          <li>
+            <h3>Enhanced Bat Algorithm for Hyperparameter Tuning (June 2020 – April 2022)</h3>
+            <p>
+              At the Electrical and Electronic Engineering Department of Shiraz University of Technology, I refined the bat algorithm—a metaheuristic optimization technique—and applied it to hyperparameter tuning in deep neural networks to optimize training processes and improve model performance.
+            </p>
+          </li>
+        </ul>
       </section>
 
       <!-- Teaching and Mentoring Section -->
       <section id="teaching" class="section">
-        <h2>Teaching and Mentoring Experience</h2>
+        <h2>Teaching &amp; Mentoring Experience</h2>
         <ul>
           <li>Teaching Assistant, Advanced Programming (Jan 2020 - Sep 2020)</li>
           <li>Teaching Assistant, Artificial Intelligence and Expert Systems (Sep 2020 - Feb 2021)</li>
@@ -250,10 +256,12 @@
         </ul>
       </section>
 
-      <!-- Honors and Awards Section -->
+      <!-- Honors & Awards Section -->
       <section id="honors-awards" class="section">
-        <h2>Honors and Awards</h2>
-        <li> <p>Ranked 4th among all the computer engineering students.</p> </li>
+        <h2>Honors &amp; Awards</h2>
+        <ul>
+          <li>Ranked 4th among all the computer engineering students.</li>
+        </ul>
       </section>
 
       <!-- Technical Skills Section -->
@@ -269,32 +277,28 @@
       <!-- References Section -->
       <section id="references" class="section">
         <h2>References</h2>
-        <p>
-          <strong>Geoffrey Fox, Professor</strong><br>
-          Department of Computer Science, University of Virginia<br>
-          gcfexchange@gmail.com
-        </p>
-        <p>
-          <strong>Reza Akbari, Associate Professor</strong><br>
-          Department of Computer Engineering, Shiraz University of Technology<br>
-          akbari@sutech.ac.ir
-        </p>
-        <p>
-          <strong>Abdollah Kavousi-Fard, Associate Professor</strong><br>
-          Department of Electrical and Electronic Engineering, Shiraz University of Technology<br>
-          kavousi@sutech.ac.ir
-        </p>
-      </section>
-
-      <!-- Connect Section -->
-      <section id="social-links" class="section">
-        <h2>Connect</h2>
-        <p class="social-links">
-          <a href="https://github.com/amirrezadolatpour2000" target="_blank">GitHub</a>
-          <a href="https://www.researchgate.net/profile/Amirreza-Dolatpour-Fathkouhi?ev=hdr_xprf" target="_blank">ResearchGate</a>
-          <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        </p>
+        <ul>
+          <li>
+            <strong>Heman Shakeri, Professor</strong><br>
+            Department of Computer Science, University of Virginia<br>
+            [Email: heman.shakeri@example.com]
+          </li>
+          <li>
+            <strong>Geoffrey Fox, Professor</strong><br>
+            Department of Computer Science, University of Virginia<br>
+            gcfexchange@gmail.com
+          </li>
+          <li>
+            <strong>Reza Akbari, Associate Professor</strong><br>
+            Department of Computer Engineering, Shiraz University of Technology<br>
+            akbari@sutech.ac.ir
+          </li>
+          <li>
+            <strong>Abdollah Kavousi-Fard, Associate Professor</strong><br>
+            Department of Electrical and Electronic Engineering, Shiraz University of Technology<br>
+            kavousi@sutech.ac.ir
+          </li>
+        </ul>
       </section>
     </div>
   </div>
