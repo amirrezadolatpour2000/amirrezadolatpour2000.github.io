@@ -3,487 +3,506 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amirreza Dolatpour Fathkouhi | Ph.D. Student</title>
+  <title>Amirreza Dolatpour Fathkouhi - Academic Profile</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      /* Modern Professional Dark Palette */
-      --bg-body: #0f172a;       /* Deep Slate */
-      --bg-sidebar: #1e293b;    /* Lighter Slate */
-      --text-main: #e2e8f0;     /* Off-white for reading */
-      --text-muted: #94a3b8;    /* Muted grey for metadata */
-      --accent-color: #38bdf8;  /* Professional Light Blue */
-      --accent-hover: #0ea5e9;  /* Darker Blue interaction */
-      --border-color: #334155;  /* Subtle borders */
+      /* Professional Dark Palette (Slate/Blue Grey) */
+      --bg-body: #0f172a;       /* Very dark slate */
+      --bg-sidebar: #1e293b;    /* Slightly lighter slate */
+      --text-primary: #f1f5f9;  /* High contrast white */
+      --text-secondary: #94a3b8;/* Muted blue-grey */
+      --accent-color: #38bdf8;  /* Sky blue accent */
+      --accent-hover: #0ea5e9;  
+      --border-color: #334155;
       --card-bg: #1e293b;
     }
 
-    * { box-sizing: border-box; }
+    /* Base Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: var(--bg-body);
-      color: var(--text-main);
+      color: var(--text-primary);
       line-height: 1.6;
-      font-weight: 300;
+      display: flex;
+      min-height: 100vh;
     }
 
     a {
       color: var(--accent-color);
       text-decoration: none;
-      transition: all 0.2s ease;
+      transition: color 0.2s ease;
     }
 
-    a:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
 
-    /* Layout */
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
-
-    /* Sidebar */
+    /* Layout Structure */
     .sidebar {
-      width: 280px;
+      width: 300px;
       background-color: var(--bg-sidebar);
-      padding: 60px 30px;
+      padding: 40px 30px;
       position: fixed;
       height: 100vh;
+      overflow-y: auto;
       border-right: 1px solid var(--border-color);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
-    .nav-links ul {
+    .main-content {
+      margin-left: 300px;
+      flex: 1;
+      padding: 60px 80px;
+      max-width: 1000px;
+    }
+
+    /* Profile Section (Sidebar) */
+    .profile-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border-color);
+      margin-bottom: 20px;
+    }
+
+    .profile-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 5px;
+    }
+
+    .profile-title {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
       list-style: none;
-      padding: 0;
+      font-size: 0.9rem;
+      text-align: left;
     }
 
-    .nav-links li {
-      margin-bottom: 18px;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      font-weight: 500;
-      font-size: 1.05rem;
-      text-decoration: none;
+    .contact-list li {
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
+      gap: 10px;
+      color: var(--text-secondary);
+    }
+    
+    .contact-list a { color: var(--text-secondary); }
+    .contact-list a:hover { color: var(--accent-color); }
+
+    /* Navigation (Sidebar) */
+    .nav-menu {
+      list-style: none;
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
     }
 
-    .nav-links a:hover {
-      color: var(--accent-color);
-      transform: translateX(5px);
+    .nav-menu li { margin-bottom: 15px; }
+
+    .nav-menu a {
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 1rem;
+      display: block;
     }
 
-    .sidebar-footer {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+    .nav-menu a:hover { color: var(--accent-color); padding-left: 5px; text-decoration: none; }
 
-    /* Main Content */
-    .main-content {
-      margin-left: 280px;
-      padding: 80px 100px;
-      width: 100%;
-      max-width: 1200px;
-    }
-
-    section {
-      margin-bottom: 80px;
-      scroll-margin-top: 50px;
-    }
-
-    /* Typography */
+    /* Content Typography */
     h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 2.5rem;
       margin-bottom: 10px;
-      color: white;
+      color: var(--text-primary);
     }
 
     h2 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: white;
+      font-size: 1.8rem;
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 15px;
+      padding-bottom: 10px;
+      margin-top: 60px;
       margin-bottom: 30px;
-      margin-top: 0;
+      color: var(--text-primary);
     }
 
     h3 {
       font-size: 1.25rem;
       font-weight: 600;
-      color: white;
       margin-bottom: 5px;
-      margin-top: 0;
+      color: #fff;
     }
 
-    .subtitle {
-      color: var(--accent-color);
-      font-size: 0.95rem;
-      font-weight: 500;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .date-meta {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-family: monospace; /* Technical feel for dates */
-    }
-
-    /* Profile Header */
-    .profile-header {
-      display: flex;
-      gap: 40px;
-      align-items: start;
-      margin-bottom: 60px;
-    }
-
-    .profile-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 12px; /* Slight rounded corners are more modern than full circle */
-      object-fit: cover;
-      background-color: var(--border-color);
-      border: 1px solid var(--border-color);
-    }
-
-    .profile-info {
-      flex: 1;
-    }
-
-    .bio-text {
+    .intro-text {
       font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 25px;
+      color: var(--text-secondary);
+      max-width: 800px;
     }
 
-    .social-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .social-btn {
-      padding: 8px 16px;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      font-size: 0.9rem;
-      color: var(--text-main);
-    }
-
-    .social-btn:hover {
-      border-color: var(--accent-color);
-      color: var(--accent-color);
-      text-decoration: none;
-      background-color: rgba(56, 189, 248, 0.05);
-    }
-
-    /* Experience & List Items */
-    .item-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .item-entry {
-      margin-bottom: 40px;
+    /* Timeline / Experience Items */
+    .timeline-item {
       position: relative;
-      padding-left: 20px;
+      padding-left: 25px;
+      margin-bottom: 40px;
       border-left: 2px solid var(--border-color);
     }
 
-    .item-entry:hover {
-      border-left-color: var(--accent-color);
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-item h3 { margin-top: 0; }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
     }
 
-    .item-entry p {
-      margin-top: 8px;
-      color: var(--text-muted);
+    .institution { color: var(--accent-color); font-weight: 500; }
+    .date { color: var(--text-secondary); font-family: monospace; }
+
+    .description {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    .description ul {
+        margin-left: 20px;
+        margin-top: 5px;
     }
 
     /* Skills Tags */
-    .skills-wrapper {
+    .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     .skill-tag {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 6px 14px;
-      border-radius: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 5px 12px;
+      border-radius: 4px;
       font-size: 0.9rem;
-      color: var(--text-main);
-      border: 1px solid transparent;
-    }
-
-    .skill-tag:hover {
-      border-color: var(--accent-color);
+      color: var(--text-secondary);
     }
 
     /* Reference Grid */
     .ref-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
-
+    
     .ref-card {
-      background-color: var(--card-bg);
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
     }
+    .ref-card h4 { color: #fff; margin-bottom: 5px; }
+    .ref-card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0; }
 
-    .ref-card h4 {
-      margin: 0 0 5px 0;
-      color: white;
-    }
-
-    .ref-card p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    /* Mobile Responsiveness */
+    /* Responsive */
     @media (max-width: 900px) {
-      .container { flex-direction: column; }
+      body { flex-direction: column; }
       .sidebar { 
         width: 100%; 
         height: auto; 
         position: relative; 
-        padding: 20px; 
+        padding: 30px; 
         border-right: none;
         border-bottom: 1px solid var(--border-color);
       }
       .main-content { margin-left: 0; padding: 40px 20px; }
-      .profile-header { flex-direction: column; align-items: center; text-align: center; }
-      .social-links { justify-content: center; flex-wrap: wrap; }
+      .nav-menu { display: none; } /* Hide nav on mobile to save space */
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <aside class="sidebar">
-      <div class="nav-links">
-        <h3 style="padding-bottom: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 20px;">Navigation</h3>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#research">Research Experience</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#skills">Technical Skills</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#references">References</a></li>
-        </ul>
-      </div>
-      <div class="sidebar-footer">
-        &copy; 2026 Amirreza Dolatpour
-      </div>
-    </aside>
-
-    <main class="main-content">
+  <aside class="sidebar">
+    <div class="profile-section">
+      <img src="amirrezadolatpour.jpeg" alt="Amirreza Dolatpour" class="profile-img">
+      <div class="profile-name">Amirreza Dolatpour Fathkouhi</div>
+      <div class="profile-title">Ph.D. Student in Computer Science</div>
       
-      <section id="about">
-        <div class="profile-header">
-          <img src="amirrezadolatpour.jpeg" alt="Amirreza Dolatpour Fathkouhi" class="profile-img">
-          <div class="profile-info">
-            <h1>Amirreza Dolatpour Fathkouhi</h1>
-            <p class="subtitle">Ph.D. Student in Computer Science | University of Virginia</p>
-            <p class="bio-text">
-              I am a researcher specializing in Deep Learning, Computer Vision, and Time-series Analysis. Currently, I am a Ph.D. student at the University of Virginia affiliated with the Center for Diabetes Technology. My work focuses on creating robust imputation methodologies and leveraging foundation models for complex physiological data.
-            </p>
-            <div class="social-links">
-              <a href="mailto:aww9gh@virginia.edu" class="social-btn">Email</a>
-              <a href="Amirreza_Dolatpour_Fathkouhi_UVA_CV.pdf" target="_blank" class="social-btn">Download CV</a>
-              <a href="https://github.com/amirrezadolatpour2000" target="_blank" class="social-btn">GitHub</a>
-              <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank" class="social-btn">LinkedIn</a>
-              <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ&hl=en" target="_blank" class="social-btn">Google Scholar</a>
-            </div>
-          </div>
+      <ul class="contact-list">
+        <li>📧 <a href="mailto:aww9gh@virginia.edu">aww9gh@virginia.edu</a></li>
+        <li>🔗 <a href="https://amirrezadolatpour2000.github.io/">Personal Website</a></li>
+        <li>🐙 <a href="https://github.com/amirrezadolatpour2000">GitHub Profile</a></li>
+        <li>📄 <a href="Amirreza_Dolatpour_Fathkouhi_UVA_CV.pdf">Download CV</a></li>
+      </ul>
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#research">Research Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching & Mentoring</a></li>
+      <li><a href="#skills">Technical Skills</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    
+    <section id="about">
+      <h1>About Me</h1>
+      <p class="intro-text">
+        [cite_start]I am a Ph.D. student at the University of Virginia [cite: 4, 6][cite_start], supervised by Prof. Heman Shakeri[cite: 7]. [cite_start]My research interests lie at the intersection of Deep Learning, Machine Learning, Computer Vision, and Time-series analysis[cite: 12]. [cite_start]Currently, I am a researcher at the Center for Diabetes Technology[cite: 5], working on imputation methodologies for complex physiological datasets.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      
+      <div class="timeline-item">
+        <h3>Ph.D. in Computer Science</h3>
+        <div class="meta-row">
+          <span class="institution">University of Virginia, Charlottesville, USA</span>
+          [cite_start]<span class="date">2023 - 2028 [cite: 13]</span>
         </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <ul class="item-list">
-          <li class="item-entry">
-            <h3>Ph.D. in Computer Science</h3>
-            <span class="subtitle">University of Virginia, Charlottesville, USA</span>
-            <span class="date-meta">2023 – 2028 (Expected)</span>
-            <p>
-              <strong>Supervisor:</strong> Prof. Heman Shakeri<br>
-              <strong>Lab:</strong> Center for Diabetes Technology
-            </p>
-          </li>
-          <li class="item-entry">
-            <h3>Bachelor of Computer Engineering</h3>
-            <span class="subtitle">Shiraz University of Technology, Iran</span>
-            <span class="date-meta">2018 – 2022</span>
-            <p>
-              <strong>GPA:</strong> 3.67 / 4.0<br>
-              <strong>Honors:</strong> Ranked 4th among all computer engineering students.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="research">
-        <h2>Research Experience</h2>
-        <ul class="item-list">
-          <li class="item-entry">
-            <h3>Researcher</h3>
-            <span class="subtitle">Center for Diabetes Technology, University of Virginia</span>
-            <span class="date-meta">Mar 2025 – Present</span>
-            <p>
-              Focusing on imputation methodologies and counterfactual inference for complex, dynamic prediction tasks within Type 1 Diabetes (T1D) datasets.
-            </p>
-          </li>
-          <li class="item-entry">
-            <h3>Researcher</h3>
-            <span class="subtitle">Department of Computer Science, University of Virginia</span>
-            <span class="date-meta">Dec 2023 – Mar 2025</span>
-            <p>
-              Developed unimodal and multimodal foundation models for astrophysics data to enable scalable cosmic AI inference.
-            </p>
-          </li>
-          <li class="item-entry">
-            <h3>Researcher</h3>
-            <span class="subtitle">Department of Electrical and Computer Engineering, University of Windsor</span>
-            <span class="date-meta">Apr 2022 – Dec 2023</span>
-            <p>
-              Implemented swarm intelligence optimizers into the LIME (Local Interpretable Model-agnostic Explanations) algorithm to improve interpretability and performance.
-            </p>
-          </li>
-          <li class="item-entry">
-            <h3>Researcher</h3>
-            <span class="subtitle">Data Modeling Group, Shiraz University of Technology</span>
-            <span class="date-meta">Jun 2020 – Apr 2022</span>
-            <p>
-              Worked on medical data preprocessing and developed a new version of the bat algorithm for hyperparameter tuning in deep neural networks.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="publications">
-        <h2>Selected Publications</h2>
-        <ul class="item-list">
-          <li class="item-entry">
-            <h3>Mitigating Exposure Bias in Risk-Aware Time Series Forecasting with Soft Tokens</h3>
-            <p><em>Alireza Namazi, <strong>Amirreza Dolatpour Fathkouhi</strong>, Heman Shakeri</em></p>
-            <p><span style="color: var(--accent-color); font-size: 0.85rem; border: 1px solid var(--accent-color); padding: 2px 6px; border-radius: 4px;">arXiv Preprint</span></p>
-          </li>
-          <li class="item-entry">
-            <h3>Scalable Cosmic AI Inference using Cloud Serverless Computing with FMI</h3>
-            <p><em>Staylor Mills, <strong>Amirreza Dolatpour Fathkouhi</strong>, Khairul Islam, Kaleigh O'Hara, Ryan Ghiles Goudjil, Geoffrey C. Fox, Judy Fox</em></p>
-            <p>Accepted in <strong>International Journal of High Performance Computing Applications</strong>.</p>
-          </li>
-          <li class="item-entry">
-            <h3>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture</h3>
-            <p><em><strong>Amirreza Dolatpour Fathkouhi</strong>, Geoffrey C. Fox</em></p>
-            <p>Accepted at <strong>20th IEEE International Conference on e-Science</strong>.</p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="skills">
-        <h2>Technical Skills</h2>
-        <div style="margin-bottom: 20px;">
-          <h4 style="color: white; margin-bottom: 10px;">Languages</h4>
-          <div class="skills-wrapper">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">C / C++</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">C#</span>
-          </div>
+        <div class="description">
+          [cite_start]Center for Diabetes Technology [cite: 5]<br>
+          [cite_start]Supervisor: Prof. Heman Shakeri [cite: 7]
         </div>
-        <div>
-          <h4 style="color: white; margin-bottom: 10px;">Frameworks & Tools</h4>
-          <div class="skills-wrapper">
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">NumPy</span>
-            <span class="skill-tag">Pandas</span>
-            <span class="skill-tag">IntelliJ IDEA</span>
-            <span class="skill-tag">Visual Studio</span>
-          </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Bachelor of Computer Engineering</h3>
+        <div class="meta-row">
+          <span class="institution">Shiraz University of Technology, Shiraz, Iran</span>
+          [cite_start]<span class="date">2018 - 2022 [cite: 14]</span>
         </div>
-      </section>
-
-      <section id="teaching">
-        <h2>Teaching Experience</h2>
-        <ul class="item-list">
-          <li class="item-entry">
-            <h3>Teaching Assistant</h3>
-            <span class="subtitle">Shiraz University of Technology</span>
-            <p>
-              Courses: <strong>Computational Intelligence</strong>, <strong>Algorithm Design</strong>, <strong>Artificial Intelligence</strong>, and <strong>Advanced Programming</strong>.<br>
-              <span class="date-meta">Jan 2020 – Aug 2021</span>
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="references">
-        <h2>References</h2>
-        <div class="ref-grid">
-          <div class="ref-card">
-            <h4>Heman Shakeri</h4>
-            <p>Assistant Professor, Dept. of Data Science</p>
-            <p>University of Virginia</p>
-            <a href="mailto:hs9hd@virginia.edu" style="font-size: 0.9rem;">hs9hd@virginia.edu</a>
-          </div>
-          <div class="ref-card">
-            <h4>Geoffrey Fox</h4>
-            <p>Professor, Dept. of Computer Science</p>
-            <p>University of Virginia</p>
-            <a href="mailto:gcfexchange@gmail.com" style="font-size: 0.9rem;">gcfexchange@gmail.com</a>
-          </div>
-          <div class="ref-card">
-            <h4>Reza Akbari</h4>
-            <p>Associate Professor</p>
-            <p>Shiraz University of Technology</p>
-            <a href="mailto:akbari@sutech.ac.ir" style="font-size: 0.9rem;">akbari@sutech.ac.ir</a>
-          </div>
-          <div class="ref-card">
-            <h4>Abdollah Kavousi-Fard</h4>
-            <p>Associate Professor</p>
-            <p>Shiraz University of Technology</p>
-            <a href="mailto:kavousi@sutech.ac.ir" style="font-size: 0.9rem;">kavousi@sutech.ac.ir</a>
-          </div>
+        <div class="description">
+          [cite_start]GPA: 3.671 (out of 4) [cite: 10]<br>
+          [cite_start]Ranked 4th among all computer engineering students [cite: 50]
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
-  </div>
+    <section id="research">
+      <h2>Research Experience</h2>
 
+      <div class="timeline-item">
+        <h3>Researcher</h3>
+        <div class="meta-row">
+          <span class="institution">Center for Diabetes Technology, University of Virginia</span>
+          [cite_start]<span class="date">Mar 2025 – Present [cite: 24]</span>
+        </div>
+        <div class="description">
+          [cite_start]Working on imputation methodologies and counterfactual inference for complex, dynamic prediction tasks in Type 1 Diabetes (T1D) datasets[cite: 25].
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Researcher</h3>
+        <div class="meta-row">
+          <span class="institution">Department of Computer Science, University of Virginia</span>
+          [cite_start]<span class="date">Dec 2023 – Mar 2025 [cite: 28]</span>
+        </div>
+        <div class="description">
+          [cite_start]Worked on unimodal and multimodal foundation models for astrophysics data[cite: 29].
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Researcher</h3>
+        <div class="meta-row">
+          <span class="institution">Dept. of Electrical and Computer Engineering, University of Windsor</span>
+          [cite_start]<span class="date">Apr 2022 – Dec 2023 [cite: 31]</span>
+        </div>
+        <div class="description">
+          [cite_start]Worked on applying a swarm intelligence optimizer to the LIME algorithm[cite: 32].
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Researcher</h3>
+        <div class="meta-row">
+          <span class="institution">Data Modeling, Processing, and Analysis Research Group, SUTECH</span>
+          [cite_start]<span class="date">Feb 2022 – Apr 2022 [cite: 34]</span>
+        </div>
+        <div class="description">
+          [cite_start]Worked on preprocessing, analyzing, and modeling medical data[cite: 35].
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Researcher</h3>
+        <div class="meta-row">
+          <span class="institution">Dept. of Electrical and Electronic Engineering, SUTECH</span>
+          [cite_start]<span class="date">Jun 2020 – Apr 2022 [cite: 38]</span>
+        </div>
+        <div class="description">
+          [cite_start]Worked on a new version of the bat algorithm and applied it to hyperparameter tuning of deep neural network models[cite: 39].
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Research Articles</h2>
+      <div class="timeline-item">
+        <h3>Mitigating Exposure Bias in Risk-Aware Time Series Forecasting with Soft Tokens</h3>
+        <div class="description">
+          [cite_start]Alireza Namazi, <strong>Amirreza Dolatpour Fathkouhi</strong>, Heman Shakeri [cite: 16]<br>
+          <span style="color: var(--accent-color);">[arXiv Preprint]</span>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <h3>Scalable Cosmic AI Inference using Cloud Serverless Computing with FMI</h3>
+        <div class="description">
+          [cite_start]Staylor Mills, <strong>Amirreza Dolatpour Fathkouhi</strong>, Khairul Islam, Kaleigh O'Hara, Ryan Ghiles Goudjil, Geoffrey C. Fox, Judy Fox [cite: 18]<br>
+          [cite_start]<em>International Journal of High Performance Computing Applications</em> [cite: 17] <span style="color: #4ade80; margin-left: 10px;">[Accepted]</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture</h3>
+        <div class="description">
+          [cite_start]<strong>Amirreza Dolatpour Fathkouhi</strong>, Geoffrey C. Fox [cite: 21]<br>
+          [cite_start]<em>20th IEEE International Conference on e-Science</em> [cite: 20] <span style="color: #4ade80; margin-left: 10px;">[Accepted]</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching & Mentoring Experience</h2>
+      
+      <div class="timeline-item">
+        <h3>Teaching Assistant, Computational Intelligence</h3>
+        <div class="meta-row">
+          <span class="institution">Shiraz University of Technology</span>
+          [cite_start]<span class="date">Mar 2021 – Aug 2021 [cite: 45]</span>
+        </div>
+        <div class="description">
+          [cite_start]Supervised 40+ Students and solved their problems[cite: 46].
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Teaching Assistant, Algorithm Design</h3>
+        <div class="meta-row">
+          <span class="institution">Shiraz University of Technology</span>
+          [cite_start]<span class="date">Mar 2021 – Aug 2021 [cite: 51]</span>
+        </div>
+        <div class="description">
+          [cite_start]Supervised 30+ Students in virtual classes and solved their problems[cite: 48].
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Teaching Assistant, Artificial Intelligence and Expert Systems</h3>
+        <div class="meta-row">
+          <span class="institution">Shiraz University of Technology</span>
+          [cite_start]<span class="date">Sep 2020 – Feb 2021 [cite: 44]</span>
+        </div>
+        <div class="description">
+          [cite_start]Supervised 30+ Students in virtual classes and solved their problems[cite: 43].
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Teaching Assistant, Advanced Programming</h3>
+        <div class="meta-row">
+          <span class="institution">Shiraz University of Technology</span>
+          [cite_start]<span class="date">Jan 2020 – Sep 2020 [cite: 42]</span>
+        </div>
+        <div class="description">
+          [cite_start]Supervised 30+ Students and graded their exercises[cite: 41].
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="timeline-item">
+        <h3>Programming Languages & Packages</h3>
+        <div class="skills-container">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Tensorflow</span>
+          <span class="skill-tag">Pytorch</span>
+          <span class="skill-tag">Numpy</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Matlab</span>
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C#</span>
+        </div>
+        [cite_start]<p class="description" style="margin-top: 10px;">[cite: 53]</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Tools & Engineering</h3>
+        <div class="skills-container">
+          <span class="skill-tag">Intellij IDEA</span>
+          <span class="skill-tag">Pycharm</span>
+          <span class="skill-tag">Visual Studio</span>
+          <span class="skill-tag">Weka</span>
+        </div>
+        [cite_start]<p class="description" style="margin-top: 10px;">[cite: 54]</p>
+      </div>
+    </section>
+
+    <section id="references">
+      <h2>References</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <h4>Heman Shakeri</h4>
+          <p>Assistant Professor, Dept. of Data Science</p>
+          <p>University of Virginia</p>
+          [cite_start]<a href="mailto:hs9hd@virginia.edu">hs9hd@virginia.edu</a> [cite: 59, 60, 61]
+        </div>
+        <div class="ref-card">
+          <h4>Geoffrey Fox</h4>
+          <p>Professor, Dept. of Computer Science</p>
+          <p>University of Virginia</p>
+          [cite_start]<a href="mailto:gcfexchange@gmail.com">gcfexchange@gmail.com</a> [cite: 62, 63]
+        </div>
+        <div class="ref-card">
+          <h4>Reza Akbari</h4>
+          <p>Associate Professor, Dept. of Computer Engineering</p>
+          <p>Shiraz University of Technology</p>
+          [cite_start]<a href="mailto:akbari@sutech.ac.ir">akbari@sutech.ac.ir</a> [cite: 64, 65]
+        </div>
+        <div class="ref-card">
+          <h4>Abdollah Kavousi-Fard</h4>
+          <p>Associate Professor, Dept. of Electrical Engineering</p>
+          <p>Shiraz University of Technology</p>
+          [cite_start]<a href="mailto:kavousi@sutech.ac.ir">kavousi@sutech.ac.ir</a> [cite: 67, 68]
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
   <script>
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-            });
-        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
   </script>
