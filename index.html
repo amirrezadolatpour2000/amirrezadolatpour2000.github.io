@@ -3,368 +3,470 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amirreza Dolatpour Fathkouhi - Academic Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Amirreza Dolatpour Fathkouhi | Ph.D. Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
   <style>
-    /* Global Theme Variables 
-       Using the Dracula palette for consistency but refined for readability 
-    */
     :root {
-      --bg-color: #282a36;
-      --sidebar-bg: #1e1f29; /* Slightly darker for contrast */
-      --text-color: #f8f8f2;
-      --heading-color: #f1fa8c; /* Soft Yellow for key headings */
-      --accent-color: #8be9fd; /* Cyan for links/accents */
-      --border-color: #44475a;
-      --hover-color: #50fa7b; /* Green for hover states */
+      /* Modern Professional Dark Palette */
+      --bg-body: #0f172a;       /* Deep Slate */
+      --bg-sidebar: #1e293b;    /* Lighter Slate */
+      --text-main: #e2e8f0;     /* Off-white for reading */
+      --text-muted: #94a3b8;    /* Muted grey for metadata */
+      --accent-color: #38bdf8;  /* Professional Light Blue */
+      --accent-hover: #0ea5e9;  /* Darker Blue interaction */
+      --border-color: #334155;  /* Subtle borders */
+      --card-bg: #1e293b;
     }
 
-    /* Reset & Base Styles */
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-size: 16px;
-      line-height: 1.7;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-weight: 300;
     }
+
     a {
       color: var(--accent-color);
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: all 0.2s ease;
     }
+
     a:hover {
-      color: var(--hover-color);
+      color: var(--accent-hover);
       text-decoration: underline;
     }
 
-    /* Layout: Sidebar + Main Content */
+    /* Layout */
     .container {
       display: flex;
       min-height: 100vh;
     }
 
-    /* Sidebar Navigation */
+    /* Sidebar */
     .sidebar {
-      width: 260px;
-      background-color: var(--sidebar-bg);
-      padding: 40px 20px;
+      width: 280px;
+      background-color: var(--bg-sidebar);
+      padding: 60px 30px;
       position: fixed;
       height: 100vh;
-      overflow-y: auto;
       border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .sidebar h2 {
-      font-size: 1.2rem;
-      color: var(--text-color);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 10px;
-    }
-    .sidebar ul {
+
+    .nav-links ul {
       list-style: none;
       padding: 0;
     }
-    .sidebar li {
-      margin-bottom: 15px;
-    }
-    .sidebar a {
-      color: #bd93f9; /* Purple for nav links */
-      font-weight: 500;
-      display: block;
-      padding: 5px 0;
-    }
-    .sidebar a:hover {
-      color: var(--hover-color);
-      padding-left: 5px; /* Subtle movement on hover */
+
+    .nav-links li {
+      margin-bottom: 18px;
     }
 
-    /* Main Content Area */
-    .content {
-      margin-left: 260px;
-      padding: 60px 80px;
-      max-width: 1000px;
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-color);
+      transform: translateX(5px);
+    }
+
+    .sidebar-footer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 280px;
+      padding: 80px 100px;
       width: 100%;
+      max-width: 1200px;
     }
-    
-    /* Section Styling */
-    .section {
+
+    section {
       margin-bottom: 80px;
-      scroll-margin-top: 40px; /* Fix for smooth scroll overlap */
+      scroll-margin-top: 50px;
     }
+
+    /* Typography */
     h1 {
       font-size: 3rem;
       font-weight: 700;
-      color: var(--hover-color);
+      letter-spacing: -0.02em;
       margin-bottom: 10px;
-      line-height: 1.2;
-    }
-    h2 {
-      font-size: 2rem;
-      color: var(--heading-color);
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-    h3 {
-      font-size: 1.4rem;
-      color: var(--accent-color);
-      margin-bottom: 5px;
-    }
-    .subtitle {
-      color: #ffb86c; /* Orange for subtitles/dates */
-      font-weight: 600;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    /* Intro Section */
-    .intro {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-    .profile-img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid var(--hover-color);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-    .intro-text p {
-      font-size: 1.1rem;
-      color: #dcdfe4;
-      max-width: 600px;
-    }
-    .contact-links {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    .contact-links a {
-      background: var(--border-color);
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-size: 0.9rem;
       color: white;
-      text-decoration: none;
-    }
-    .contact-links a:hover {
-      background: var(--hover-color);
-      color: var(--bg-color);
     }
 
-    /* Lists */
-    ul.styled-list {
-      padding-left: 0;
-      list-style: none;
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: white;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      margin-top: 0;
     }
-    ul.styled-list li {
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+
+    .subtitle {
+      color: var(--accent-color);
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .date-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-family: monospace; /* Technical feel for dates */
+    }
+
+    /* Profile Header */
+    .profile-header {
+      display: flex;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px; /* Slight rounded corners are more modern than full circle */
+      object-fit: cover;
+      background-color: var(--border-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .bio-text {
+      font-size: 1.1rem;
+      color: var(--text-muted);
       margin-bottom: 25px;
-      padding-left: 20px;
-      border-left: 3px solid var(--border-color);
     }
-    ul.styled-list li:hover {
-      border-left-color: var(--hover-color);
-    }
-    
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    .social-links {
+      display: flex;
       gap: 20px;
     }
-    .skill-card {
-      background: var(--sidebar-bg);
+
+    .social-btn {
+      padding: 8px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .social-btn:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      text-decoration: none;
+      background-color: rgba(56, 189, 248, 0.05);
+    }
+
+    /* Experience & List Items */
+    .item-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .item-entry {
+      margin-bottom: 40px;
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid var(--border-color);
+    }
+
+    .item-entry:hover {
+      border-left-color: var(--accent-color);
+    }
+
+    .item-entry p {
+      margin-top: 8px;
+      color: var(--text-muted);
+    }
+
+    /* Skills Tags */
+    .skills-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-tag {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      border: 1px solid transparent;
+    }
+
+    .skill-tag:hover {
+      border-color: var(--accent-color);
+    }
+
+    /* Reference Grid */
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .ref-card {
+      background-color: var(--card-bg);
       padding: 20px;
       border-radius: 8px;
-    }
-    .skill-card strong {
-      display: block;
-      color: var(--accent-color);
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-    .skill-card ul {
-      padding-left: 20px;
-      margin: 0;
-      color: #dcdfe4;
+      border: 1px solid var(--border-color);
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
+    .ref-card h4 {
+      margin: 0 0 5px 0;
+      color: white;
+    }
+
+    .ref-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 900px) {
       .container { flex-direction: column; }
-      .sidebar { width: 100%; height: auto; position: relative; padding: 20px; }
-      .content { margin-left: 0; padding: 40px 20px; }
-      .intro { flex-direction: column; text-align: center; }
-      .contact-links { justify-content: center; }
+      .sidebar { 
+        width: 100%; 
+        height: auto; 
+        position: relative; 
+        padding: 20px; 
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .main-content { margin-left: 0; padding: 40px 20px; }
+      .profile-header { flex-direction: column; align-items: center; text-align: center; }
+      .social-links { justify-content: center; flex-wrap: wrap; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <nav class="sidebar">
-      <h2>Menu</h2>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Research Experience</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#skills">Technical Skills</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#references">References</a></li>
-      </ul>
-    </nav>
+    <aside class="sidebar">
+      <div class="nav-links">
+        <h3 style="padding-bottom: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 20px;">Navigation</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#research">Research Experience</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#skills">Technical Skills</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        &copy; 2026 Amirreza Dolatpour
+      </div>
+    </aside>
 
-    <main class="content">
+    <main class="main-content">
       
-      <section id="about" class="section">
-        <div class="intro">
-          <img class="profile-img" src="amirrezadolatpour.jpeg" alt="Amirreza Dolatpour Fathkouhi">
-          <div class="intro-text">
+      <section id="about">
+        <div class="profile-header">
+          <img src="amirrezadolatpour.jpeg" alt="Amirreza Dolatpour Fathkouhi" class="profile-img">
+          <div class="profile-info">
             <h1>Amirreza Dolatpour Fathkouhi</h1>
-            <p>
-              I am a Ph.D. student in Computer Science at the <strong>University of Virginia</strong>, advised by Prof. Heman Shakeri[cite: 4, 6, 7]. My research is currently based at the <strong>Center for Diabetes Technology</strong>, focusing on deep learning applications for healthcare.
+            <p class="subtitle">Ph.D. Student in Computer Science | University of Virginia</p>
+            <p class="bio-text">
+              I am a researcher specializing in Deep Learning, Computer Vision, and Time-series Analysis. Currently, I am a Ph.D. student at the University of Virginia affiliated with the Center for Diabetes Technology. My work focuses on creating robust imputation methodologies and leveraging foundation models for complex physiological data.
             </p>
-            <p>
-              My work centers on developing robust imputation methodologies and counterfactual inference for complex, dynamic Type 1 Diabetes (T1D) datasets, as well as exploring foundation models for time-series and scientific data[cite: 12, 25, 29].
-            </p>
-            <div class="contact-links">
-              <a href="mailto:aww9gh@virginia.edu">aww9gh@virginia.edu</a> [cite: 1]
-              <a href="https://amirrezadolatpour2000.github.io/" target="_blank">Website</a> [cite: 2]
-              <a href="https://github.com/amirrezadolatpour2000" target="_blank">GitHub</a>
-              <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank">LinkedIn</a>
-              <a href="Amirreza_Dolatpour_Fathkouhi_UVA_CV.pdf" target="_blank">Download CV</a>
+            <div class="social-links">
+              <a href="mailto:aww9gh@virginia.edu" class="social-btn">Email</a>
+              <a href="Amirreza_Dolatpour_Fathkouhi_UVA_CV.pdf" target="_blank" class="social-btn">Download CV</a>
+              <a href="https://github.com/amirrezadolatpour2000" target="_blank" class="social-btn">GitHub</a>
+              <a href="https://www.linkedin.com/in/amirreza-dolatpour-fathkouhi/" target="_blank" class="social-btn">LinkedIn</a>
+              <a href="https://scholar.google.com/citations?user=nEbUr3QAAAAJ&hl=en" target="_blank" class="social-btn">Google Scholar</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="education" class="section">
+      <section id="education">
         <h2>Education</h2>
-        <ul class="styled-list">
-          <li>
+        <ul class="item-list">
+          <li class="item-entry">
             <h3>Ph.D. in Computer Science</h3>
-            <span class="subtitle">University of Virginia, USA | 2023 - 2028 (Expected)</span> [cite: 4, 6, 13]
-            <p>Supervisor: Prof. Heman Shakeri [cite: 7]<br>
-            Affiliation: Center for Diabetes Technology [cite: 5]</p>
+            <span class="subtitle">University of Virginia, Charlottesville, USA</span>
+            <span class="date-meta">2023 – 2028 (Expected)</span>
+            <p>
+              <strong>Supervisor:</strong> Prof. Heman Shakeri<br>
+              <strong>Lab:</strong> Center for Diabetes Technology
+            </p>
           </li>
-          <li>
+          <li class="item-entry">
             <h3>Bachelor of Computer Engineering</h3>
-            <span class="subtitle">Shiraz University of Technology, Iran | 2018 - 2022</span> [cite: 8, 9, 14]
-            <p>GPA: 3.671 / 4.0 [cite: 10]<br>
-            Ranked 4th among all computer engineering students [cite: 50]</p>
+            <span class="subtitle">Shiraz University of Technology, Iran</span>
+            <span class="date-meta">2018 – 2022</span>
+            <p>
+              <strong>GPA:</strong> 3.67 / 4.0<br>
+              <strong>Honors:</strong> Ranked 4th among all computer engineering students.
+            </p>
           </li>
         </ul>
       </section>
 
-      <section id="experience" class="section">
+      <section id="research">
         <h2>Research Experience</h2>
-        <ul class="styled-list">
-          <li>
-            <h3>Researcher - Center for Diabetes Technology</h3>
-            <span class="subtitle">University of Virginia | Mar 2025 – Present</span> [cite: 24, 25]
+        <ul class="item-list">
+          <li class="item-entry">
+            <h3>Researcher</h3>
+            <span class="subtitle">Center for Diabetes Technology, University of Virginia</span>
+            <span class="date-meta">Mar 2025 – Present</span>
             <p>
-              Developing imputation methodologies and counterfactual inference techniques for complex, dynamic prediction tasks in Type 1 Diabetes (T1D) datasets[cite: 25].
+              Focusing on imputation methodologies and counterfactual inference for complex, dynamic prediction tasks within Type 1 Diabetes (T1D) datasets.
             </p>
           </li>
-          <li>
-            <h3>Researcher - Foundation Models</h3>
-            <span class="subtitle">Dept. of Computer Science, UVA | Dec 2023 – Mar 2025</span> [cite: 27, 28]
+          <li class="item-entry">
+            <h3>Researcher</h3>
+            <span class="subtitle">Department of Computer Science, University of Virginia</span>
+            <span class="date-meta">Dec 2023 – Mar 2025</span>
             <p>
-              Worked on unimodal and multimodal foundation models for astrophysics data[cite: 29], contributing to scalable AI inference solutions.
+              Developed unimodal and multimodal foundation models for astrophysics data to enable scalable cosmic AI inference.
             </p>
           </li>
-          <li>
-            <h3>Researcher - Swarm Intelligence</h3>
-            <span class="subtitle">University of Windsor | Apr 2022 – Dec 2023</span> [cite: 31, 32]
+          <li class="item-entry">
+            <h3>Researcher</h3>
+            <span class="subtitle">Department of Electrical and Computer Engineering, University of Windsor</span>
+            <span class="date-meta">Apr 2022 – Dec 2023</span>
             <p>
-              Applied swarm intelligence optimizers to the LIME (Local Interpretable Model-agnostic Explanations) algorithm to enhance model interpretability[cite: 32].
+              Implemented swarm intelligence optimizers into the LIME (Local Interpretable Model-agnostic Explanations) algorithm to improve interpretability and performance.
+            </p>
+          </li>
+          <li class="item-entry">
+            <h3>Researcher</h3>
+            <span class="subtitle">Data Modeling Group, Shiraz University of Technology</span>
+            <span class="date-meta">Jun 2020 – Apr 2022</span>
+            <p>
+              Worked on medical data preprocessing and developed a new version of the bat algorithm for hyperparameter tuning in deep neural networks.
             </p>
           </li>
         </ul>
       </section>
 
-      <section id="publications" class="section">
+      <section id="publications">
         <h2>Selected Publications</h2>
-        <ul class="styled-list">
-          <li>
+        <ul class="item-list">
+          <li class="item-entry">
             <h3>Mitigating Exposure Bias in Risk-Aware Time Series Forecasting with Soft Tokens</h3>
-            <p><em>Alireza Namazi, <strong>Amirreza Dolatpour Fathkouhi</strong>, Heman Shakeri</em><br>
-            <span style="color: #ff79c6;">[arXiv Preprint]</span></p> 
+            <p><em>Alireza Namazi, <strong>Amirreza Dolatpour Fathkouhi</strong>, Heman Shakeri</em></p>
+            <p><span style="color: var(--accent-color); font-size: 0.85rem; border: 1px solid var(--accent-color); padding: 2px 6px; border-radius: 4px;">arXiv Preprint</span></p>
           </li>
-          <li>
+          <li class="item-entry">
             <h3>Scalable Cosmic AI Inference using Cloud Serverless Computing with FMI</h3>
-            <p><em>Staylor Mills, <strong>Amirreza Dolatpour Fathkouhi</strong>, et al.</em><br>
-            <span style="color: #50fa7b;">Accepted</span> in <em>International Journal of High Performance Computing Applications</em></p> [cite: 17, 18]
+            <p><em>Staylor Mills, <strong>Amirreza Dolatpour Fathkouhi</strong>, Khairul Islam, Kaleigh O'Hara, Ryan Ghiles Goudjil, Geoffrey C. Fox, Judy Fox</em></p>
+            <p>Accepted in <strong>International Journal of High Performance Computing Applications</strong>.</p>
           </li>
-          <li>
+          <li class="item-entry">
             <h3>AstroMAE: Redshift Prediction Using a Masked Autoencoder with a Novel Fine-Tuning Architecture</h3>
-            <p><em><strong>Amirreza Dolatpour Fathkouhi</strong>, Geoffrey C. Fox</em><br>
-            <span style="color: #50fa7b;">Accepted</span> at <em>20th IEEE International Conference on e-Science</em></p> [cite: 19, 20, 21]
+            <p><em><strong>Amirreza Dolatpour Fathkouhi</strong>, Geoffrey C. Fox</em></p>
+            <p>Accepted at <strong>20th IEEE International Conference on e-Science</strong>.</p>
           </li>
         </ul>
       </section>
 
-      <section id="skills" class="section">
+      <section id="skills">
         <h2>Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <strong>Languages & Core</strong>
-            <ul>
-              <li>Python, C/C++, Java</li>
-              <li>MATLAB, C#</li>
-            </ul> [cite: 53]
+        <div style="margin-bottom: 20px;">
+          <h4 style="color: white; margin-bottom: 10px;">Languages</h4>
+          <div class="skills-wrapper">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C / C++</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">C#</span>
           </div>
-          <div class="skill-card">
-            <strong>AI & Data Science</strong>
-            <ul>
-              <li>PyTorch, TensorFlow</li>
-              <li>NumPy, Pandas, Weka</li>
-              <li>Deep Learning, Computer Vision</li>
-              <li>Time-series Analysis</li>
-            </ul> [cite: 12, 53, 54]
-          </div>
-          <div class="skill-card">
-            <strong>Tools</strong>
-            <ul>
-              <li>IntelliJ IDEA, PyCharm</li>
-              <li>Visual Studio</li>
-              <li>LaTeX (Academic Writing)</li>
-            </ul> [cite: 54]
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 10px;">Frameworks & Tools</h4>
+          <div class="skills-wrapper">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag">Visual Studio</span>
           </div>
         </div>
       </section>
 
-      <section id="teaching" class="section">
+      <section id="teaching">
         <h2>Teaching Experience</h2>
-        <ul class="styled-list">
-          <li><strong>Teaching Assistant:</strong> Computational Intelligence (Mar 2021 - Aug 2021) [cite: 46]</li>
-          <li><strong>Teaching Assistant:</strong> Algorithm Design (Mar 2021 - Aug 2021) [cite: 47]</li>
-          <li><strong>Teaching Assistant:</strong> Artificial Intelligence (Sep 2020 - Feb 2021) [cite: 43]</li>
-          <li><strong>Teaching Assistant:</strong> Advanced Programming (Jan 2020 - Sep 2020) [cite: 41]</li>
+        <ul class="item-list">
+          <li class="item-entry">
+            <h3>Teaching Assistant</h3>
+            <span class="subtitle">Shiraz University of Technology</span>
+            <p>
+              Courses: <strong>Computational Intelligence</strong>, <strong>Algorithm Design</strong>, <strong>Artificial Intelligence</strong>, and <strong>Advanced Programming</strong>.<br>
+              <span class="date-meta">Jan 2020 – Aug 2021</span>
+            </p>
+          </li>
         </ul>
       </section>
 
-      <section id="references" class="section">
+      <section id="references">
         <h2>References</h2>
-        <div class="skills-grid">
-           <div class="skill-card">
-             <strong>Heman Shakeri</strong>
-             <p>Assistant Professor, UVA<br>
-             <a href="mailto:hs9hd@virginia.edu">hs9hd@virginia.edu</a></p> [cite: 59, 61]
-           </div>
-           <div class="skill-card">
-             <strong>Geoffrey Fox</strong>
-             <p>Professor, UVA<br>
-             <a href="mailto:gcfexchange@gmail.com">gcfexchange@gmail.com</a></p> [cite: 62, 63]
-           </div>
+        <div class="ref-grid">
+          <div class="ref-card">
+            <h4>Heman Shakeri</h4>
+            <p>Assistant Professor, Dept. of Data Science</p>
+            <p>University of Virginia</p>
+            <a href="mailto:hs9hd@virginia.edu" style="font-size: 0.9rem;">hs9hd@virginia.edu</a>
+          </div>
+          <div class="ref-card">
+            <h4>Geoffrey Fox</h4>
+            <p>Professor, Dept. of Computer Science</p>
+            <p>University of Virginia</p>
+            <a href="mailto:gcfexchange@gmail.com" style="font-size: 0.9rem;">gcfexchange@gmail.com</a>
+          </div>
+          <div class="ref-card">
+            <h4>Reza Akbari</h4>
+            <p>Associate Professor</p>
+            <p>Shiraz University of Technology</p>
+            <a href="mailto:akbari@sutech.ac.ir" style="font-size: 0.9rem;">akbari@sutech.ac.ir</a>
+          </div>
+          <div class="ref-card">
+            <h4>Abdollah Kavousi-Fard</h4>
+            <p>Associate Professor</p>
+            <p>Shiraz University of Technology</p>
+            <a href="mailto:kavousi@sutech.ac.ir" style="font-size: 0.9rem;">kavousi@sutech.ac.ir</a>
+          </div>
         </div>
       </section>
 
@@ -375,9 +477,13 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+            });
+        }
       });
     });
   </script>
